@@ -7,118 +7,112 @@
     font-family: 'poppins', sans-serif;
 }
 
-.header {
- width: 100%;
- height: 100vh;
- background-image: url(./Images/background.png);
- background-position: center;
- background-size: cover;
 
+body {
+     background-color: #4F959D; 
+    /* background-image: url(./Images/background/Classroom\ Setup\ Ideas\ for\ Secondary\ -\ Reading\ and\ Writing\ Haven.jpg); */
 }
 
-.side-nav {
-    width: 110px;
-    height: 100%;
-    position: fixed;
-    top: 0;
-    left: 0;
-    padding: 30px 15px;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
-    display: flex;
-    justify-content: space-between;
-    flex-direction: column;
-    transition: width 0.5s;
+.custom-jumbotron {
+    width: 92%;
+    background-color: #EDE8DC;
+    margin: auto; /* Centers it */
 }
 
-.user{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    width: 60px;
-    overflow: hidden;
-    font-size: 12px;
-    padding: 10px;
-    border-radius: 8px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.user div {
-    display: none;
-}
-
-.user h2{
-    font-size: 15px;
-    font-weight: 600;
-    white-space: nowrap;
-}
-
-.user-img {
-    width: 40px;
-    border-radius: 50%;
-    margin: auto;
-}
-
-.star-img {
-    width: 20px;
-    display: none;
-}
-
-ul {
-    list-style: none;
-    padding: 0 15px;
-}
-
-ul li {
-    margin: 30px 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-}
-
-ul li img {
-    width: 30px;
-    margin-right: 0px;
-}
-
-ul li p {
-    white-space: nowrap;
-    display: none;
-}
-
-.side-nav:hover {
-    width: 250px;
-
-}
-
-.side-nav:hover .user div {
-    display: block;
-}
-
-.side-nav:hover .user {
+/* Main content */
+#classes {
+    position: relative;
     width: 100%;
-    background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(5px);
 }
 
-.side-nav:hover .star-img {
-    display: block;
+.content {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    padding: 20px;
+    margin-left: 100px; /* Adjust according to sidebar width */
 }
 
-.side-nav:hover .user-img{
-    margin: 0;
+/* Each box takes equal space */
+.box {
+    flex: 1;
+    min-width: 250px; /* Ensures boxes don’t shrink too much */
+    background: #EDE8DC;
+    padding: 20px;
+    margin-top: 25px;
+    text-align: center;
 }
 
-.side-nav:hover ul li p {
-    display: block;
+/* Styling for heading */
+.box h2 {
+    justify-content: center;
+    text-align: center;
+    color: white;
 }
 
-.side-nav:hover ul li img {
-    margin-right: 10px;
+/* Third Box Styling */
+.third-box {
+    padding: 10px;
+    text-align: center;
+    margin-right: 110px;
+    margin-left: 110px;
+    margin-top: 20px; /* Adds spacing between the content and third box */
+    width: 92%; /* Makes the third box take up the full width of the container */
 }
 
-.side-nav:hover ul li {
-    justify-content: flex-start;
+.custom-container {
+    width: 92%;
+    margin: auto; /* Centers the row */
 }
+/* table */
+
+.custom-table {
+    width: 93%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    margin-left: 60px;
+}
+
+.custom-table th, .custom-table td {
+    border: 1px solid #ddd;
+    padding: 12px;
+}
+
+.custom-table thead {
+    background-color: #f4f4f4;
+    color: #333;
+    font-weight: bold;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+.custom-table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* notes */
+
+.dash {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-weight: 400;
+}
+
+.custom-jumbotron {
+    margin-top: 20px;
+  }
+
+  .nav-pills .nav-link {
+    color: white !important;
+    background-color: transparent !important;
+  }
+  
+  .nav-pills .nav-link:hover {
+    color: #ccc !important; /* Optional: Slightly lighter text on hover */
+  }
+  

@@ -1,0 +1,67 @@
+/* Extra small devices (phones) */
+@media (max-width: 576px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* Small devices (tablets) */
+@media (max-width: 768px) {
+  body {
+    font-size: 16px;
+  }
+}
+
+/* Medium devices (desktops) */
+@media (max-width: 992px) {
+  body {
+    font-size: 18px;
+  }
+}
+
+/* Large devices (large desktops) */
+@media (max-width: 1200px) {
+  body {
+    font-size: 20px;
+  }
+}
+
+/* sidebar */
+
+@media (max-width: 768px) {
+  .sidebar {
+      width: 200px;
+  }
+  .content {
+      margin-left: 220px;
+  }
+}
+
+/* div */
+
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column; /* Stacks divs on smaller screens */
+      margin-left: 0; /* Removes sidebar offset */
+      padding: 10px; /* Add padding between content and edges */
+  }
+
+  .box {
+      width: 100%; /* Makes boxes full width */
+  }
+}
+
+/* Responsive Design for small screens */
+@media (max-width: 768px) {
+  .content {
+      flex-direction: column; /* Stack the first two boxes vertically */
+  }
+  
+  .box {
+      flex: 1 1 100%; /* Each box takes full width on small screens */
+  }
+
+  .third-box {
+      width: 100%; /* Ensure the third box also takes full width on small screens */
+  }
+}

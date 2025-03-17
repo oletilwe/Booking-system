@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'poppins', sans-serif;
+}
+
+
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+body {
+    background-color: #4F959D;
+   /* background-image: url(./Images/background/55\ Best\ Classroom\ Decoration\ Ideas\ for\ Teachers\ -\ Chaylor\ &\ Mads.jpg); */
+}
+
+.custom-hero {
+    width: 92%;
+    margin: auto; /* Centers the row */
+}
+
+.nav-pills .nav-link {
+    color: white !important;
+    background-color: transparent !important;
+  }
+  
+  .nav-pills .nav-link:hover {
+    color: #ccc !important; /* Optional: Slightly lighter text on hover */
+  }
+  
+.lead {
+    color: white;
+}
+
+ul li {
+    color: white;
+}
