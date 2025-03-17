@@ -1,0 +1,76 @@
+body {
+    background-color: #4F959D;
+    /* background-image: url(./Classroom\ Setup\ Ideas\ for\ Secondary\ -\ Reading\ and\ Writing\ Haven.jpg); */
+    color: white; /* Make text readable on the dark background */
+    font-family: sans-serif;
+    display: flex; /* Use flexbox to center the form */
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Ensure full viewport height */
+    margin: 0;
+}
+
+#formContainer {
+    background-color: rgba(255, 255, 255, 0.1); /* Slightly transparent white container */
+    padding: 2rem;
+    border-radius: 10px;
+    width: 90%; /* Responsive width */
+    max-width: 400px; /* Maximum width on larger screens */
+    box-sizing: border-box; /* Include padding in width calculation */
+}
+
+#formContainer h2 {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+#formContainer label {
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+#formContainer input[type="email"],
+#formContainer input[type="password"] {
+    width: 100%;
+    padding: 0.75rem;
+    margin-bottom: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 20px; /* Curved ends */
+    box-sizing: border-box;
+    background-color: rgba(255, 255, 255, 0.9); /* Slightly transparent white input */
+    color: black;
+}
+
+#formContainer button {
+    width: 100%;
+    padding: 0.75rem;
+    background-color: #57B4BA; /* Green button */
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+}
+
+#formContainer button:hover {
+    background-color: #57B4BA;
+}
+
+#message {
+    text-align: center;
+    margin-top: 1rem;
+    color: black; /* Red color for error messages */
+}
+
+
+h2 {
+    color: white;
+}
+
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    #formContainer {
+        padding: 1.5rem;
+    }
+}
