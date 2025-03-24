@@ -7,9 +7,10 @@ body {
     background-size: cover;
     text-align: center;
     color: white; 
+}
 
 header {
-    background-color: rgba(0, 123, 255, 0.8); 
+    background-color: #007074; 
     color: white;
     padding: 20px;
     font-size: 24px;
@@ -104,4 +105,18 @@ button {
     border: 2px solid #007BFF;
     display: block;
     margin: 0 auto;
+}
+
+.booking-entry button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.booking-entry button:hover {
+    background: red;
 }

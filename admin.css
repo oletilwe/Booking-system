@@ -9,8 +9,8 @@
 
 
 body {
-     background-color: #4F959D; 
-    /* background-image: url(./Images/background/Classroom\ Setup\ Ideas\ for\ Secondary\ -\ Reading\ and\ Writing\ Haven.jpg); */
+     /* background-color: #007074; */
+    background-image: url(./Images/download\ 1.jpg);
 }
 
 .custom-jumbotron {
@@ -42,6 +42,7 @@ body {
     margin-top: 25px;
     text-align: center;
 }
+
 
 /* Styling for heading */
 .box h2 {
@@ -114,5 +115,13 @@ body {
   
   .nav-pills .nav-link:hover {
     color: #ccc !important; /* Optional: Slightly lighter text on hover */
+  }
+  
+  
+  /* facilitator */
+
+  .row.mb-2 {
+    width: 90%;
+    margin: 0 auto; /* Centers the row */
   }
   
