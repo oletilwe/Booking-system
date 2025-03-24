@@ -7,9 +7,10 @@ body {
     background-size: cover;
     text-align: center;
     color: white; 
+}
 
 header {
-    background-color: rgba(0, 123, 255, 0.8); 
+    background-color: #007074; 
     color: white;
     padding: 20px;
     font-size: 24px;
@@ -105,6 +106,7 @@ button {
     display: block;
     margin: 0 auto;
 }
+<<<<<<< HEAD
 .booking-entry button {
     background: #007BFF; /* Blue background */
     color: white; /* White text */
@@ -120,4 +122,19 @@ button {
     background: red; /* Darker blue when hovered */
 }
 
+=======
+
+.booking-entry button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.booking-entry button:hover {
+    background: red;
+>>>>>>> 54041b501b9e4fe95986370861a732d0a94889c6
 }

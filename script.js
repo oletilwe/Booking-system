@@ -45,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
         if (users[email] && users[email].password === password && users[email].role === role) {
             messageDisplay.textContent = "Login successful!";
             if (role === 'user') {
-                window.location.href = "about.html"; // Redirect user
+                window.location.href = "user.html"; // Redirect user
             } else if (role === 'trainer') {
                 window.location.href = "trainer.html"; // Redirect trainer
             } else if (role === 'admin') {
