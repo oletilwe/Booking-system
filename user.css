@@ -105,3 +105,19 @@ button {
     display: block;
     margin: 0 auto;
 }
+.booking-entry button {
+    background: #007BFF; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    cursor: pointer;
+    padding: 10px; /* Ensure padding is consistent */
+    margin-top: 10px; /* Space the button from other elements */
+    border-radius: 5px; /* Rounded corners */
+}
+
+/* Change background color when hovered */
+.booking-entry button:hover {
+    background: red; /* Darker blue when hovered */
+}
+
+}

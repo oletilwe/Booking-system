@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trainer Management</title>
+    <link rel="stylesheet" href="TrainerManagement.css">
+</head>
+<body>
+    <header>Trainer Management</header>
+    
+    <div class="container">
+        <h2>Trainer Profile Management</h2>
+        <form id="trainer-form">
+            <label for="name">Name:</label>
+            <input type="text" id="name" required>
+
+            <label for="expertise">Expertise:</label>
+            <input type="text" id="expertise" required>
+
+            <label for="experience">Experience (years):</label>
+            <input type="number" id="experience" required>
+
+            <label for="certifications">Certifications:</label>
+            <input type="text" id="certifications" required>
+
+            <label for="cv">Upload CV:</label>
+            <input type="file" id="cv">
+
+            <label for="rate">Daily Rate (R):</label>
+            <input type="number" id="rate" required>
+
+            <label for="availability">Availability:</label>
+            <select id="availability">
+                <option value="available">Available</option>
+                <option value="booked">Booked</option>
+                <option value="on leave">On Leave</option>
+            </select>
+
+            <button type="submit">Update Profile</button>
+
+            
+               <label for="profilePicture">Profile Picture:</label>
+               <input type="file" id="profilePicture" accept="image/*">
+
+
+            <img id="previewImage" src="" alt="Profile Picture Preview" style="max-width: 100px; margin-top: 10px;">
+
+        </form>
+    </div>
+
+    <div id="trainersList" class="container">
+        <h2>List of Available Trainers</h2>
+        <div id="trainersResults"></div>
+    </div>
+
+    <div id="userBookings" class="container">
+        <h2>Your Bookings</h2>
+        <div id="bookingsList"></div>
+    </div>
+
+    <script src="TrainerManagement.js"></script>
+</body>
+</html>
+

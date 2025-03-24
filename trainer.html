@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,7 +19,7 @@
         <button onclick="viewBookings()" style="background:blue;">View My Bookings</button>
     </div>
 
-    <!-- Image Modal -->
+    
     <div id="imageModal" class="modal">
         <span class="close" onclick="closeImageModal()">&times;</span>
         <img class="modal-content" id="fullImage">
@@ -39,7 +40,7 @@
         <button onclick="cancelBooking()" style="background:black;">Cancel</button>
     </div>
 
-    <!-- View Bookings Section -->
+    
     <div id="bookingsContainer" class="container" style="display:none;">
         <h2>My Bookings</h2>
         <div id="bookingsList"></div>
@@ -114,7 +115,7 @@
                         <p><strong>Session Date:</strong> ${booking.date}</p>
                         <p><strong>Session Time:</strong> ${booking.time}</p>
                         <p><strong>Status:</strong> <span id="status${booking.trainerName}" class="${booking.status.toLowerCase()}">${booking.status}</span></p>
-                        <button onclick="deleteBooking(${index})" style="background:red;">Delete Booking</button>
+                        <button onclick="deleteBooking(${index})">Delete Booking</button>
                         <hr>
                     </div>
                 `).join("");
@@ -159,3 +160,7 @@
     </script>
 </body>
 </html>
+
+
+
+

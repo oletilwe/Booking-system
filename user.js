@@ -4,7 +4,6 @@ function searchTrainers() {
     let trainerResults = document.getElementById('trainerResults');
     trainerResults.innerHTML = "";
 
-    // List of trainers
     let trainers = [
         {name: "Bonang Matheba", expertise: "Lecture", location: "Gauteng", availability: "Available", rate: 1500, about: "Bonang is an expert in public speaking and lectures on business communication. She has 10 years of experience.", image: "images/bonang.jpg"},
         {name: "Pearl Thusi", expertise: "Online Educator", location: "Kwazulu-Natal", availability: "Not Available", rate: 1200, about: "Pearl specializes in online education for mathematics and has taught over 500 students.", image: "images/pearl.jpg"},
@@ -17,19 +16,16 @@ function searchTrainers() {
         {name: "Dylan Efron", expertise: "Mentor", location: "Northern Cape", availability: "Not Available", rate: 1100, about: "Dylan provides guidance on personal growth and goal setting.", image: "images/dylan.jpg"}
     ];
 
-    // Get search query values
     let searchQuery = document.getElementById('searchBox').value.toLowerCase();
     let locationQuery = document.getElementById('locationBox').value.toLowerCase();
     let availabilityQuery = document.getElementById('availabilityBox').value;
     
-    // Filter trainers based on search criteria
     let filtered = trainers.filter(t =>
         (t.expertise.toLowerCase().includes(searchQuery) || searchQuery === "") &&
         (t.location.toLowerCase().includes(locationQuery) || locationQuery === "") &&
         (t.availability === availabilityQuery || availabilityQuery === "")
     );
     
-    // Display filtered trainers
     if (filtered.length > 0) {
         filtered.forEach(trainer => {
             trainerResults.innerHTML += `
@@ -43,15 +39,16 @@ function searchTrainers() {
                 </div>
             `;
         });
-        trainerList.style.display = 'block';  // Show results section
+        trainerList.style.display = 'block';
     } else {
         trainerResults.innerHTML = "<p>No trainers found.</p>";
-        trainerList.style.display = 'none';  // Hide list if no results
+        trainerList.style.display = 'block';
     }
 }
 
 function viewProfile(name, expertise, location, availability, rate, about, image) {
     localStorage.setItem('selectedTrainer', JSON.stringify({ name, expertise, location, availability, rate, about, image }));
-    window.location.href = 'trainer.html';  // Redirect to the trainer profile page
+    window.location.href = 'trainer.html';
 }
+
 
