@@ -2,23 +2,29 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = document.getElementById("trainer-form");
     const trainersResults = document.getElementById("trainersResults");
     const bookingsList = document.getElementById("bookingsList");
+    const viewBookingsBtn = document.getElementById("viewBookingsBtn");
+
+    if (viewBookingsBtn) {
+        viewBookingsBtn.addEventListener("click", function () {
+            window.location.href = "YourBookings.html";
+        });
+    }
 
     // Simulating a logged-in user (you can replace this with real login logic)
     const loggedInUser = "John Doe"; // Change this as needed to simulate different users
 
     const trainers = [
-        {name: "Bonang Matheba", expertise: "Lecture", location: "Gauteng", availability: "Available", rate: 1500, about: "Bonang is an expert in public speaking and lectures on business communication. She has 10 years of experience.", image: "images/bonang.jpg"},
-        {name: "Pearl Thusi", expertise: "Online Educator", location: "Kwazulu-Natal", availability: "Not Available", rate: 1200, about: "Pearl specializes in online education for mathematics and has taught over 500 students.", image: "images/pearl.jpg"},
-        {name: "Kim Englbrecht", expertise: "Online Educator", location: "Western Cape", availability: "Available", rate: 1300, about: "Kim focuses on digital learning and has created numerous online courses.", image: "images/kim.jpg"},
-        {name: "Hungani Ndlovu", expertise: "Teacher", location: "Mpumalanga", availability: "Available", rate: 1000, about: "Hungani is a certified teacher with a passion for science and technology.", image: "images/hungani.jpg"},
-        {name: "Thuso Mbedu", expertise: "Teacher", location: "Limpopo", availability: "Not Available", rate: 900, about: "Thuso specializes in early childhood education and has worked with special needs children.", image: "images/thuso.jpg"},
-        {name: "Atandwa Kani", expertise: "Corporate Trainer", location: "Eastern Cape", availability: "Available", rate: 2000, about: "Athandwa provides corporate training on leadership and team building.", image: "images/athandwa.jpg"},
-        {name: "Drea Mashel", expertise: "Tutor", location: "Free State", availability: "Available", rate: 800, about: "Drea is a language tutor specializing in all South African languages.", image: "images/drea.jpg"},
-        {name: "Charlise Theron", expertise: "Mentor", location: "North West", availability: "Available", rate: 1500, about: "Charlise mentors young professionals in career development and leadership.", image: "images/charlise.jpg"},
-        {name: "Dylan Efron", expertise: "Mentor", location: "Northern Cape", availability: "Not Available", rate: 1100, about: "Dylan provides guidance on personal growth and goal setting.", image: "images/dylan.jpg"}
+        {name: "Jane Smith", expertise: "Lecture", location: "Gauteng", availability: "Available", rate: 1500, about: "With over 10 years experience Jane is an industry expert in her field and has been a Lecture at different institutions, Most of her clients are corporate based but has mentors individuals", image: "images/Jane.jpg"},
+        {name: "Charlie Hardson", expertise: "Mathametics lecture", location: "Kwazulu-Natal", availability: "Not Available", rate: 1200, about: "Charlie is an  Applied Mathematician professor who has taught 500+ students", image: "images/Charlie.jpg"},
+        {name: "Tshiamo Serrano", expertise: "Networking Online educator", location: "Western Cape", availability: "Available", rate: 1300, about: "A certificate Holder of the CCNA and CCNP, There is alot experience to go around. Former network architecture at SAA.", image: "images/Tshiamo.jpg"},
+        {name: "Blessing Bridge", expertise: "SOC Analyst", location: "Mpumalanga", availability: "Available", rate: 1000, about: "His a certificate holder of the CCNP SP which qualifies him to be our cybersecurity facilitator", image: "images/Blessing.jpg"},
+        {name: "Drea Mashele", expertise: "CyberSecurity", location: "Limpopo", availability: "Not Available", rate: 900, about: "highly qualified cybersecurity expert, and is vendor certified with compTia", image: "images/drea.jpg"},
+        {name: "Noah Lang", expertise: "Leadership and team building trainer", location: "Eastern Cape", availability: "Available", rate: 2000, about: "Has run leadership classes for the likes of ABSA, TELKOM and Microsoft", image: "images/Noah.jpg"},
+        {name: "Christina Jacob", expertise: "Web development", location: "Free State", availability: "Available", rate: 1500, about: "5+ years of web development facilitator, lead developer for UnderArmour", image: "images/Christina.jpg"},
+        {name: "Cara Sky", expertise: "Career development and leadership mentor", location: "North West", availability: "Available", rate: 1500, about: "mentors young professionals in career development and leadership", image: "images/Cara.jpg"},
+        {name: "Jonathen Claus", expertise: "personal growth mentor", location: "Northern Cape", availability: "Not Available", rate: 1100, about: "Dylan provides guidance on personal growth and goal setting. Works with alot of corporate members", image: "images/Jonathen.jpg"}
     ];
 
-    // This should contain the bookings made by all users
     let userBookings = [
         {userName: "John Doe", trainerName: "Bonang Matheba", bookingStatus: "Pending"},
         {userName: "Jane Smith", trainerName: "Kim Englbrecht", bookingStatus: "Pending"},
@@ -26,9 +32,8 @@ document.addEventListener("DOMContentLoaded", function () {
         {userName: "John Doe", trainerName: "Drea Mashel", bookingStatus: "Accepted"},
     ];
 
-    let selectedTrainer = null; // Variable to store selected trainer for profile update
+    let selectedTrainer = null;
 
-    // Display trainers (Only Available ones)
     function displayTrainers() {
         trainersResults.innerHTML = "";
         trainers.forEach(trainer => {
@@ -44,7 +49,6 @@ document.addEventListener("DOMContentLoaded", function () {
             `;
             trainersResults.appendChild(trainerDiv);
 
-            // Add event listener for Select button
             const selectBtn = trainerDiv.querySelector('.select-trainer-btn');
             selectBtn.addEventListener('click', function() {
                 selectTrainer(trainer.name);
@@ -61,13 +65,10 @@ document.addEventListener("DOMContentLoaded", function () {
             document.getElementById("certifications").value = selectedTrainer.certifications || "";
             document.getElementById("rate").value = selectedTrainer.rate;
             document.getElementById("availability").value = selectedTrainer.availability;
-
-            // Show current profile picture
             document.getElementById("previewImage").src = selectedTrainer.image || "";
         }
     }
 
-    // Handle profile picture upload
     const profilePictureInput = document.getElementById("profilePicture");
     profilePictureInput.addEventListener("change", function(event) {
         const file = event.target.files[0];
@@ -77,7 +78,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const previewImage = document.getElementById("previewImage");
                 previewImage.src = e.target.result;
                 if (selectedTrainer) {
-                    selectedTrainer.image = e.target.result; // Update the selected trainer's image
+                    selectedTrainer.image = e.target.result;
                 }
             };
             reader.readAsDataURL(file);
@@ -86,34 +87,23 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 
-    // Form submission handling to update the profile
     form.addEventListener("submit", function (event) {
-        event.preventDefault(); // Prevent the form from reloading the page
-
+        event.preventDefault();
         if (selectedTrainer) {
-            // Update the selected trainer's data with the form input values
             selectedTrainer.name = document.getElementById("name").value;
             selectedTrainer.expertise = document.getElementById("expertise").value;
             selectedTrainer.experience = document.getElementById("experience").value;
             selectedTrainer.certifications = document.getElementById("certifications").value;
             selectedTrainer.rate = document.getElementById("rate").value;
             selectedTrainer.availability = document.getElementById("availability").value;
-
-            // Show a success message
             alert('Profile updated successfully!');
-
-            // Update the trainer display to reflect the changes
             displayTrainers();
         }
     });
 
-    // Display the bookings for the logged-in user only
     function displayBookings() {
         bookingsList.innerHTML = "";
-
-        // Filter bookings to show only the ones made by the logged-in user
         const filteredBookings = userBookings.filter(booking => booking.userName === loggedInUser);
-
         filteredBookings.forEach(booking => {
             const bookingDiv = document.createElement('div');
             bookingDiv.classList.add('booking-actions');
@@ -124,28 +114,9 @@ document.addEventListener("DOMContentLoaded", function () {
                 <button class="reject" data-user="${booking.userName}" data-trainer="${booking.trainerName}">Reject</button>
             `;
             bookingsList.appendChild(bookingDiv);
-
-            // Add event listeners for Accept and Reject buttons
-            const acceptBtn = bookingDiv.querySelector('.accept');
-            const rejectBtn = bookingDiv.querySelector('.reject');
-            acceptBtn.addEventListener('click', function() {
-                updateBookingStatus(acceptBtn.dataset.user, acceptBtn.dataset.trainer, 'Accepted');
-            });
-            rejectBtn.addEventListener('click', function() {
-                updateBookingStatus(rejectBtn.dataset.user, rejectBtn.dataset.trainer, 'Rejected');
-            });
         });
     }
 
-    function updateBookingStatus(userName, trainerName, status) {
-        const booking = userBookings.find(b => b.userName === userName && b.trainerName === trainerName);
-        if (booking) {
-            booking.bookingStatus = status;
-            displayBookings();
-        }
-    }
-
-    // Display the trainers and the bookings (for the logged-in user)
     displayTrainers();
     displayBookings();
 });

@@ -106,7 +106,7 @@ button {
     display: block;
     margin: 0 auto;
 }
-<<<<<<< HEAD
+
 .booking-entry button {
     background: #007BFF; /* Blue background */
     color: white; /* White text */
@@ -122,7 +122,7 @@ button {
     background: red; /* Darker blue when hovered */
 }
 
-=======
+
 
 .booking-entry button {
     background-color: #007BFF;
@@ -136,5 +136,5 @@ button {
 
 .booking-entry button:hover {
     background: red;
->>>>>>> 54041b501b9e4fe95986370861a732d0a94889c6
+
 }
