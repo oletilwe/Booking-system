@@ -2,15 +2,15 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('images/Pic1.jpg') no-repeat center center fixed;
+    background: url('images/pic1.jpg') no-repeat center center fixed;
     background-size: cover;
     text-align: center;
 }
 
 header {
-    background-color: #007BFF;
+    /*background-color: #007BFF;*/
     color: white;
-    padding: 20px;
+    padding: 15px;
     font-size: 24px;
 }
 
@@ -25,15 +25,17 @@ header {
 }
 
 input, select, button {
-    width: 100%;
+    width: 98%;
     padding: 10px;
     margin-top: 10px;
+    
     border: 1px solid #ddd;
     border-radius: 5px;
+
 }
 
 button {
-    background: #007BFF;
+    background: #9ACBD0;
     color: white;
     border: none;
     cursor: pointer;
@@ -82,7 +84,7 @@ button:hover {
 
 .facilitator button {
     margin-top: 10px;
-    background-color: #007BFF;
+    background-color: #9ACBD0;
     color: white;
     border: none;
     padding: 10px;
@@ -90,16 +92,17 @@ button:hover {
 }
 
 .facilitator button:hover {
-    background-color: #0056b3;
+    background-color: #9ACBD0;
 }
 
 .booking-actions button {
-    background-color: #28a745;
+    background-color: white;
+    color: black;
     margin-top: 10px;
 }
 
 .booking-actions button.reject {
-    background-color: #dc3545;
+    background-color: #9ACBD0;
 }
 h2 {
     text-align: center;

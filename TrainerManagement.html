@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trainer Management</title>
     <link rel="stylesheet" href="TrainerManagement.css">
+    <link href="mediaqueries1.css">
 </head>
 <body>
     <header>Trainer Management</header>
@@ -22,7 +23,7 @@
             <input type="number" id="experience" required>
 
             <label for="certifications">Certifications:</label>
-            <input type="text" id="certifications" required>
+            <input type="text" id="certifications" >
 
             <label for="cv">Upload CV:</label>
             <input type="file" id="cv">
@@ -38,6 +39,7 @@
             </select>
 
             <button type="submit">Update Profile</button>
+           
 
             <label for="profilePicture">Profile Picture:</label>
             <input type="file" id="profilePicture" accept="image/*">
@@ -47,7 +49,7 @@
     </div>
 
     <div id="trainersList" class="container">
-        <h2>List of Available Trainers</h2>
+        <h2>List of Trainers</h2>
         <div id="trainersResults"></div>
     </div>
 
@@ -58,4 +60,16 @@
 
     <script src="TrainerManagement.js"></script>
 </body>
+<footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top w-90 mx-auto">
+    <p class="col-md-4 mb-0 text-body-secondary">© 2025 Trainer Co.</p>
+    <div class="col-md-4 d-flex justify-content-end align-items-center">
+        <a href="Signup.html" class="nav-link px-4 text-body-secondary">Log Out</a>
+        <a href="about.html" class="nav-link px-4 text-body-secondary">About us</a>
+    </div>
+    <style>
+        .nav-link {
+            color: black;
+        }
+    </style>
+</footer>
 </html>

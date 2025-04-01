@@ -6,7 +6,7 @@ function searchTrainers() {
 
     let trainers = [
         {name: "Jane Smith", expertise: "Lecture", location: "Gauteng", availability: "Available", rate: 1500, about: "With over 10 years experience Jane is an industry expert in her field and has been a Lecture at different institutions, Most of her clients are corporate based but has mentors individuals", image: "images/Jane.jpg"},
-        {name: "Charlie Hardson", expertise: "Mathametics lecture", location: "Kwazulu-Natal", availability: "Not Available", rate: 1200, about: "Charlie is an  Applied Mathematician professor who has taught 500+ students", image: "images/Charlie.jpg"},
+        {name: "Charlie Hudson", expertise: "Mathametics lecture", location: "Kwazulu-Natal", availability: "Not Available", rate: 1200, about: "Charlie is an  Applied Mathematician professor who has taught 500+ students", image: "images/Charlie.jpg"},
         {name: "Tshiamo Serrano", expertise: "Networking Online educator", location: "Western Cape", availability: "Available", rate: 1300, about: "A certificate Holder of the CCNA and CCNP, There is alot experience to go around. Former network architecture at SAA.", image: "images/Tshiamo.jpg"},
         {name: "Blessing Bridge", expertise: "SOC Analyst", location: "Mpumalanga", availability: "Available", rate: 1000, about: "His a certificate holder of the CCNP SP which qualifies him to be our cybersecurity facilitator", image: "images/Blessing.jpg"},
         {name: "Drea Mashele", expertise: "CyberSecurity", location: "Limpopo", availability: "Not Available", rate: 900, about: "highly qualified cybersecurity expert, and is vendor certified with compTia", image: "images/drea.jpg"},

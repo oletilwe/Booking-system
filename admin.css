@@ -125,3 +125,27 @@ body {
     margin: 0 auto; /* Centers the row */
   }
   
+  .facilitators-container {
+    background-color: #706D54 !important;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+}
+
+.btn-container {
+    display: flex;
+    justify-content: flex-end;
+    text-align: center;
+}
+
+/* 
+
+.budget-section {
+    background-color: #F1E7E7 !important; 
+    color: black;
+    border-radius: 15px;
+    padding: 30px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+*/

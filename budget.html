@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget</title>
+    <link href="budget.css" rel="stylesheet">
+    <link href="mediaqueries1.css" rel="mediaqueries">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    
+    <div class="container">
+        <header class="d-flex justify-content-center py-3">
+          <ul class="nav nav-pills">
+            <li class="nav-item"><a href="admin.html" class="nav-link active" aria-current="page"></a></li>
+          </ul>
+        </header>
+        <h2 class="dash">Home</h2>
+      </div>
+
+      <div class="chart-container">
+        <div class="chart-box">
+            <canvas id="facilitatorChart"></canvas>
+        </div>
+    </div>
+
+    <script>
+        // Data for the chart
+        const ctx = document.getElementById('facilitatorChart').getContext('2d');
+        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        const facilitators = ["Jane Smith", "Charlie Hudson", "Tshiamo Serrano", "Blessing Bridge", "Drea Mashele", "Noah Lang", "Christina Jacob", "Cara Sky", "Jonathen Claus"];
+    
+        // Input your exact data here. Example data, replace with your actual data.
+        const facilitatorData = {
+            "Jane Smith": [58000, 6000, 97500, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "Charlie Hudson": [27000, 5500, 76500, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "Tshiamo Serrano": [42000, 6200, 66000, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "Blessing Bridge": [14000, 5800, 28500, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "Drea Mashele": [12000, 16100, 7600, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "Noah Lang": [38000, 20000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "Christina Jacob": [25000, 12000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0],
+            "Jonathen Claus": [15000, 40000, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+        };
+    
+        // Create datasets from facilitatorData
+        const datasets = facilitators.map((facilitator, index) => {
+            const backgroundColor = `rgba(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255}, 0.6)`;
+            const borderColor = backgroundColor.replace('0.6', '1');
+            return {
+                label: facilitator + ' (R)',
+                data: facilitatorData[facilitator],
+                backgroundColor: backgroundColor,
+                borderColor: borderColor,
+                borderWidth: 1
+            };
+        });
+    
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+                labels: months,
+                datasets: datasets
+            },
+            options: {
+                responsive: true,
+                maintainAspectRatio: false,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        title: { display: true, text: 'Money (R)' }
+                    },
+                    x: {
+                        title: { display: true, text: 'Months' }
+                    }
+                },
+                plugins: {
+                    legend: {
+                        labels: {
+                            usePointStyle: false,
+                        }
+                    }
+                }
+            }
+        });
+    </script>
+</body>
+<footer class="d-flex flex-wrap justify-content-center align-items-center py-3 my-4 border-top mt-auto">
+    <p class="col-md-4 mb-0 text-body-secondary">© 2025 Trainer Co.</p>
+    <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+        <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+    </a>
+    <ul class="nav col-md-4 justify-content-end">
+    </ul>
+</footer>
+</html>

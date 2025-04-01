@@ -1,0 +1,52 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: url(./Images/download\ 1.jpg);
+}
+
+  /* budget */
+
+  .chart-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    /* background-color: #B0A9F5; /* Lighter shade of #8F87F1 */
+    width: 90%;
+    margin: 0 auto;
+}
+
+/* Chart card styling */
+.chart-box {
+    background: white;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    width: 80%;
+    max-width: 1200px; /* Increased size to accommodate more bars */
+}
+
+.dash {
+    color: white;
+    justify-content: center;
+    text-align: center;
+    font-weight: 400;
+}
+
+.custom-jumbotron {
+    margin-top: 20px;
+  }
+
+  .nav-pills .nav-link {
+    color: white !important;
+    background-color: transparent !important;
+  }
+  
+  .nav-pills .nav-link:hover {
+    color: #ccc !important; /* Optional: Slightly lighter text on hover */
+  }
+
